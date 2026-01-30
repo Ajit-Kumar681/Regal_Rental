@@ -1,0 +1,196 @@
+/* ===================== RESET ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  /* min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #111827;
+  padding: 20px; */
+}
+
+/* ===================== AUTH BOX ===================== */
+.auth-box {
+  width: 380px;
+  max-width: 95%;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08), 0 4px 10px rgba(0,0,0,0.05);
+  animation: fadeIn 0.5s ease;
+  text-align: center;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===================== LOGO ===================== */
+.auth-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.auth-logo img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+/* ===================== TITLE & DESC ===================== */
+.auth-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.auth-desc {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+/* ===================== INPUTS ===================== */
+.auth-box input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.auth-box input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79,70,229,0.15);
+}
+
+/* ===================== BUTTON ===================== */
+.auth-box button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 16px;
+}
+
+.auth-box button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(79,70,229,0.35);
+}
+
+/* ===================== DIVIDER ===================== */
+.divider {
+  text-align: center;
+  margin: 22px 0;
+  font-size: 13px;
+  color: #6b7280;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+.divider::before { left: 0; }
+.divider::after { right: 0; }
+
+/* ===================== GOOGLE BUTTON ===================== */
+.google-btn {
+  width: 100%;
+  padding: 12px;
+  background: #ffffff;
+  color: #1f2937;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.25s ease;
+  margin-bottom: 16px;
+}
+
+.google-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.google-btn:hover {
+  background: #f3f4f6;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+/* ===================== TOGGLE SIGNUP ===================== */
+.toggle-text {
+  font-size: 14px;
+  color: #374151;
+  margin-top: 18px;
+}
+
+.toggle-text span {
+  color: #4f46e5;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.toggle-text span:hover {
+  text-decoration: underline;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+  .auth-box {
+    width: 90%;
+    padding: 28px;
+  }
+
+  .auth-title { font-size: 22px; }
+  .auth-desc { font-size: 14px; }
+}
+
+@media (max-width: 480px) {
+  .auth-box {
+    padding: 24px;
+    width: 100%;
+    margin: 0 10px;
+  }
+
+  .auth-logo img { width: 70px; height: 70px; }
+  .auth-title { font-size: 20px; }
+  .auth-desc { font-size: 13px; }
+  .auth-box input,
+  .auth-box button,
+  .google-btn { font-size: 14px; padding: 12px; }
+}
